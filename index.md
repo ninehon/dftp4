@@ -6,7 +6,7 @@
 想看看其他更多讯息吗？
 到这里看看吧...
 
-- [git.io/ttkm995](git.io/ttkm995)
+- [https://git.io/ttkm995](https://git.io/ttkm995)
 - [https://git.io/8fqfq](https://git.io/8fqfq)
 - [https://git.io/573t3t](https://git.io/573t3t)
 
