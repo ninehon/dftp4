@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAGIBAABiAQAAAAAAAAAAAAD///8A/uzODvuvK3f7nwDX+58A0fu2PGv+7tQK////AP78+AD7rSVc+58Az/ujC7z+8+EU/vnvAfuoGG37nwDP+6cWsf747Qz///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////APrcnRz4pg+o+KEB+vihAf/4oQH/+KEB9/iqGJf98t0J/vz4APitJnL4oQH/+KUM5/704Rr++e8C96kZhvihAf/4qRfb/vjtD////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A9a0fnvWkAvr1pAP89aQD1fWkA9r1pAP99KMD9vjNd07+/PgA97EncvWkA//1qA7n/fThGv757wL2rRqG9aQD//WsGdv++O0P/v7+AP7+/gD+/v4A/v7+AP7+/gD+/v4A/v7+AP7+/gD///8A////AP///wD///8A////AP///wDxpgTl8qYE//KmBNT525wi+NaLLPKmBOHxpgT99cVcjP78+ADzsypy8qYE//KqEOf99OEa/vnvAvKvHobypgT/8q4a2/347Q/99ukC9LxFRfW6O2n1ujtp9bo7afW6O2n0ujtg+ue9Ev///wD///8A////AP///wD///8A////AO+pBf7vqQX/8rw8uP378wD8+O0B8bYrze+pBf70x12j/vz4APC0K3LvqQX/760Q5/z04Rr++e8C8LAehu+pBf/wsBvb/fjtD/z15AbvrhOn76kF/++pBf/vqQX/76kF/+6pBen44ass////AP///wD///8A////AP///wD///8A7KwH+uysB//vvDa8/fjsA/z15AbutyfQ7KwH/vLJXp/+/PgA7rgrcuysB//srxLn/PXhGv357wLttB+G7KwH/+2zHdv9+e0P/PbkBeyxF5jsrQro7K0K6OysCPHsrAf+66sH6ffiqyz///8A////AP///wD///8A////AP///wDprgjT6a8I/umvCOfzxEtb8sA+ZumvCO/prgj88Mpfev78+ADquixy6a8I/+myE+f89eIa/frvAum2IIbprwj/6rYe2/357Q/+/foA+/DUF/vw0SP78NEj78hWduiuCPvorgjp9uOsLP///wD+/v4A/OTBBvbkrB/46r8N/v7+AOq/N2zmsgrs5bIJ/uWyCfflsgn55bIJ/uayDOPz2Iou/vz4AOm7LHLlsgn/5rUU5/v14hr9+u8C6LcghuWyCf/nuB/b/fntD////wD///8A////AP///wDvz2lg5bEJ++SxCe3v0nJT9eSoMPLcjznoshSq5bIJ4eW0E8Hx2oox/PjrB+3RamPitg/f4rQK+uK0CvnjthDX79Z8Vf78+AL+/PgA5b8sb+K0CvnjtxXi+/biGf367wHkuyCD4rQK+eS6H9b8+e0O////AP///wD///8A////AOzQaWDiswr74rQK/eK0Cu7itArq4rQK7eK0Cv3itAr/4rQK/uK0Csf///8A/fz1AfXrux3r02pH69NrRPftxBr+/PgB////AP79+gDu2n0d69JqQ+zUcT38+e0G/fz1AO3YdSPr0mpD7NZ3Of379AP///8A////AP///wD///8A6tNqXt63DPbftwz637cM+t+3DPrftwz737cM/t+3DP/ftwz+37cL0f389QH9/PUB/f34AP///wD///8A////AP///wD+/vsA/fz1Av79+AD///8A////AP///wD+/v4A/fz2AP389QH9/PYA/v7+AP///wD///8A////AP///wDy5aYj6tVuXOrVb13q1W9d6tVvXejQW2TevRPB3LoN9d28E9TozldA3MYuedzGLnnl1mdX////AP///wD9/foA8+msHOjYc2TdxS2G5dFUZfTtvh39/PgA////APz78QHgzD9G3MYued7LP2H8+u8F////AP///wD///8A////AP///wD///8A////AP///wD///8A/v34APXxxhHn2nIt9O3DF/389wHVvxD/1b8Q/+DQUrj///8A/v7+AOneiTLXwRbN1b8Q+9W/EP7VvxD71sIbzufZfDX+/v0A/PvwBNnFJpTVvxD/2MQlzfv67g3///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////ANLCEf/SwhH/3tJTuP///wD39d0J1sgqtNLCEf7SwhH408QY4NLCEffSwhH+1ccltPn35Qv8+/AE1scolNLCEf/WxybN+/ruDf///wD///8A////AP///wD///8A////AP///wD///8A////AP7++wDw6KoR6eOSM+/qqBn+/vsBz8US/8/FEv/c1FO4////AO/styfOxRLmzsQS/dfOPY3u66wZ1copis/FEv3Qxhjt7uuxIvv78ATTySqUz8US/9PKJ837+u4N/PvzAunllT7n5I9f5+SPX+fkj1/n5I9f5+SPX+fkj1/n5I9f4996ZdDGGcLPxRLu0McY0+PddUDMyBT/zMgU/9nXVbj///8A7+23OcvIFPHLxxP83dpnTP7+/gDo5plOzMgU9szHE/Xi33o4+/vwBNDMKpTMyBT/0Mwozfv67g35+OYFzcogo8zIFPnMyBT5zMgU+czIFPnMyBT5zMgU+czIFPnMyBT6zMgU/szIFP/MyBT+zMgU0sjKFf/IyhX/19hWuP///wDt7rc4yMoV8MjKFfzb3WdP/v7+AOfnmlDIyhX3yMoU9eDhezf7+/AEzc8slMjKFf/NzirN+/vuDfj55QXLzSGbyMoV7cjKFe3IyhXtyMoV7cjKFe3IyhXtyMoV7cjKFfDIyhX9yMoV/8jKFf7JyhXFxc0X/8XNF//V2le4////AOzvuCPFzRbixc0X/c7VPZ7g44Ipy9Evm8XNF/7Gzhzp7OyzH/v78ATK0i2Uxc0X/8rRK836++4N+/zyAOTolhzk5pEr5OaRK+TmkSvk5pEr5OaRK+TmkSvk5pEr3eJ9NsfRKajFzBbmydEmwN7hdjDC0Bj/wtAY/9LcWLj///8A9ffdBsnVMKfC0Bj9wtAY+sLQGO/C0Bj6wtAY/cbUK6f3+eYJ+/zwBMfULpTC0Bj/x9Qszfr77g3///8A////AP///wD///8A////AP///wD///8A////AP///wD+/vwA8/TaCOHlkhr199gM/v77AL/TGfu/0xn70N5Ztf///wD+/v4A4umQJsPVK7m/0xn1v9MZ/b/TGfXD1Si76e+yKP7+/QD7/PADxdYwkb/TGfvE1y3K+vvuDP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A4+2fX+Ptn1/q8blE////AP///wD9/vsA8/fXEeLsnEzI4khq3eyNTe7zwhH+/v0A////AP39+AHm7qg34+2fX+Xup0z8/fcE////AP///wD///8A////AP///wD///8A////AP///wD///8A/f74APH0zRHY5X4t7fTGF/z99wH///8A////AP///wD///8A////AP///wD///8A/v7+APz+9wD+//0A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A5PCsI9TneFzU6Hhd1Oh4XdToeF3P5mdku9okwbjYHPW62SLUzuNjQNDpdkPQ6XZD3e+cMP///wD+/v0A2e2QNdDpdkPg8KYr////AP///wD+/v0A8/ncEtbrgDzR6XVN4fGmJfn87QT///8A////AP///wD///8A////AP///wDR6HVetdod9rXbHfq12x36tdsd+rXbHfu12x3+tdsd/7XbHf612x3Rst4f+bLeH/nH5l20////AP7+/QDB5ErIst4f+c3pbqD///8A/f35ANblezm34C7Est4f97LeH/qz3iHpw+VSf/X75Ar///8A////AP///wD///8A////AM/qdWCx3h/7st4f/bLeH+6y3h/qst4f7bLeH/2y3h//st4f/rLeH8ev4CD/r+Ag/8ToXbj///8A/v79Ab7mS82v4CD/yupupP///wDp9sMXs+EpyK/gIP6v4CD7r+Ag9a/gIP6v4SD1wehVYPv99AH///8A////AP///wD///8Azet2YK7gIPuv4CDt0ex/U+LzsDDa8Jo5ruMoqq/gIOGy4ijB2O+UMazjIf+s4yH/wupeuP///wD+/v0Bu+hMzazjIf/J7G+k/v79ANfxlU6s4yH2q+Mh+cTrYYDS7YFLreMl06zjIf6y5TS0+f3vCf3++gDw+tgX7/rWI+/61iPF62d2q+Mh+6vjIeni9bQs////AP7+/gDk/MMG4/W0H+n3xA3+/v4AqOYi/6jmIv/A7F+4////AP7+/QG56k3NqOYi/8fucKT8/vgAtelDbajmIv6r5ynq6PjFHvj87wOw6DeNqOYi/6/oNdb4/e8O9fznBa3nMJip5iXoqeYl6KnmI/Go5iL+qOYi6eH1tCz///8A////AP///wD///8A////AP///wCl6ST/pekk/77uYLj///8A/v79AbbsTs2l6ST/xPBxpPz++ACy60Zxpekk/6npK+f0/M0a+f3xAq3qOoel6ST/reo32vj97w/1/OcGqekvp6XpJP+l6ST/pekk/6XpJP+l6CTp4Pa1LP///wD///8A////AP///wD///8A////AKLsJf+i7CX/u/BhuP///wD+/v0BtO9PzaLsJf/C8nGk/v79AM30jV2i6yX7o+wl9M30a0jl+cQWqO01sqLsJf+q7TjF+P3vC/b97AK68F1Ft+9WabfvVmm371Zpt+9WabbvVmDl+sYS////AP///wD///8A////AP///wD///8An+4m/5/uJv+58mK4////AP7+/QGx8VDNn+4m/8D0cqT///8A2vmnLZ/vJeSf7ib+n+4n5J/uJ86f7ib4n+4m/LDxTYn5/fID/v7+AP7+/gD+/v4A/v7+AP7+/gD+/v4A/v7+AP7+/gD///8A////AP///wD///8A////AP///wCc8Sj/nPEo/7f0Y7j///8A/v79Aa7zUc2c8Sj/vvV0pP///wD0/uECsPRUc5zxKPCc8Sj/nPEo/5vxKP2e8SvD2/unHv///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AJnzKd+Z8ynftfZkof///wD+/v0BrPVSs5nzKd+993SQ////AP///wDq+84KtvUteJnzKdaZ8ynqnPMwscv2kTD6/fYA////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A/////+fe////3v//v97//7/e8P+/3v///97////e///////7////+///////////P/7//z/+//8//v//P/7/+z/+//s//v//P/7///////////////////////v////7Pf///z3///89/v//Pd7w/z3+//89////PfP///////8=" />
+  <title>虛擬機映像檔驗證碼</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: "微軟正黑體", Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #92CDAF;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 46em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 5px;
+      padding-bottom: 30px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+	  background-color: #EEFCF2;
+	  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
+	h2 { font-size: 1.8em; text-align: center; }
+	.left-m { padding-left: 1em; }
+	.red-color { color: red; }
+	.foot-v { text-align: right; padding-right:2em; font-size: 80%; }
+	a { text-decoration: none }
+	a:link { color: #1a68b3; }
+	a:hover{ text-decoration: underline; }
+	.noul { margin-top: -1em;}
+
+    @media (max-width: 1200px) {
+      body {
+		max-width: 44em;
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+    }
+
+
+    @media (max-width: 800px) {
+      body {
+        font-size: 0.8em;
+        padding: 0.8em;
+      }
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.7em;
+        padding: 0.5em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+
+
+    @media (max-width: 400px) {
+      body {
+        font-size: 0.6em;
+        padding: 0.2em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+	
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #c9935e;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2>虛擬機映像檔最新驗證碼</h2>
+<p>提供虛擬機(Guest)映像檔最新檔案驗證碼供比對。</p>
+<hr>
+<h3>Windows 11 虛擬機</h3>
+<p>※Windows 11 企業版 24H2 LTSC (11-LTSC.rar)</p>
+<ul class="noul">
+<li>MD5: 1976792CA240FAAE4BAED50385ED0EC1</li>
+<li>檔案大小：5.04G (2024.11.27 更新)</li>
+</ul><span class="red-color"></span>
+<p>※Windows 11 Pro 23H2 64位元版 (w11-23H2.7z)</p>
+<ul class="noul">
+<li>MD5: 477F7347591B305941A6BC522259139E</li>
+<li>檔案大小：5.48G (2023.12.29 更新)</li>
+</ul><span class="red-color"></span>
+<p>※<span class="red-color"><strong>簡體</strong></span> Windows 11 Pro 23H2 64 位元版 (CN23H2.7z)</p>
+<ul class="noul">
+	</li>
+	<li>MD5: 6672CB086920FB326B6554A8D6A0401A<br />
+	</li>
+	<li>檔案大小：6.02G (2023.11.25 更新)</li>
+</ul>
+<p>※<span class="red-color"><strong>簡體</strong></span> Windows 11 Pro 22H2 64位元版 (W11cn22H2.7z)</p>
+<ul class="noul">
+	</li>
+	<li>MD5: E8E497F98FC187BCCE015DADFF031059<br />
+	</li>
+	<li>檔案大小：4.52G</li>
+</ul>
+<hr>
+<h3>Windows 10 虛擬機</h3>
+<p>※Window10 Pro 22H2x64 映像檔 (W10_22H2.7z)</p>
+<ul class="noul">
+<li>MD5：3C58F16B06581DDD8D699E2669C93E7F</li>
+<li>檔案大小：5.58G (2023.11.27 更新)</li>
+</ul>
+<p>※Windows 10 LTSC 2021 (21H2) x64 映像檔 (W10_Ltsc2021x64.7z)</p>
+<ul class="noul">
+<li>MD5：672550FA09AF3500EB5A005CFD818634</li>
+<li>檔案大小：5G (2023.11.25 更新)</li>
+</ul>
+<p>※Windows 10 LTSC 2021 (21H2) x86 映像檔 (W10_Ltsc2021x86.7z)</p>
+<ul class="noul">
+<li>MD5：03B399C429B695AC9C128121C528AC8D</li>
+<li>檔案大小：3.40G (2022.10.08 更新)</li>
+</ul>
+<p>※<span class="red-color"><strong>英文版</strong></span> Win10 LTSC 2021×64 VM 映像檔 (W10enx64.7z)</p>
+<ul class="noul">
+<li>MD5：8288E5AD3770EFA7BBEB3B0D17DB80F2</li>
+<li>檔案大小：4.35G</li>
+</ul>
+<p>※<span class="red-color"><strong>簡體</strong></span> Win10 22H2x64 VM 映像檔 (w10cn_22H2x64.7z)</p>
+<ul class="noul">
+<li>MD5：02484527548C4DB6A780A56D141579D1</li>
+<li>檔案大小：5.03G</li>
+</ul>
+<p>※<span class="red-color"><strong>簡體</strong></span> Win10 22H2x86 VM 映像檔 (Win10CNx86.7z)</p>
+<ul class="noul">
+<li>MD5：FC711717A7E207000139ED08F3089663</li>
+<li>檔案大小：3.94G (2024.7.6更新)</li>
+</ul>
+<p>※<span class="red-color"><strong>簡體</strong></span> Win10 LTSC 2021×64 VM 映像檔 (cn10LTSC2021x64.7z)</p>
+<ul class="noul">
+<li>MD5：B6FC8E7A8142E5B6E8C53322B1013170</li>
+<li>檔案大小：4.86G</li>
+</ul>
+<p>※<span class="red-color"><strong>簡體</strong></span> Win10 LTSCx86 VM 映像檔 (w10cn_LTSCx86.7z)</p>
+<ul class="noul">
+<li>MD5：DA60F8E94AE1521201BA344845FC5365</li>
+<li>檔案大小：3.63G</li>
+</ul>
+<hr>
+<h3>Windows 7 虛擬機</h3>
+<p>※Win7 pro(32位元) – 更新到 2017.12月</p>
+<ul class="noul">
+<li>MD5：1D2CF8CA45082B7ACC09FE61B8386300 &nbsp;&nbsp;Win7pro32.7z</li>
+<li>檔案大小：2.98G</li>
+</ul>
+<p>※Win 7 旗艦版(64位元) - 更新到 2019.10月</p>
+<ul class="noul">
+<li>1D32C394EA6831F6B1DB08B88B3A84E2 &nbsp;&nbsp;w7_64.7z</li>
+<li>檔案大小：2.79G</li>
+</ul>
+<hr>
+<h3>Windows XP 虛擬機</h3>
+<p><b>※愛博專用虛擬機映像檔</b> (愛博版本為 20200625)</p>
+<ul class="noul">
+<li>MD5：79BABEA40D188D952BEA5BD8CBF85807 &nbsp;&nbsp;ippotv.7z</li>
+<li>特點：檔案小(598MB)、自動變更電腦名稱與虛擬 IP(可縮短開機撥號時間)，不會與其他虛擬機衝突。</li>
+<li>說明：第一次開機系統會設置電腦名稱與 SID 然後自動從新開機，要花點時間，請稍候…</li>
+</ul>
+<p>※繁體 XP 乾淨安裝</p>
+<ul class="noul">
+<li>MD5：BA1E9C5A3D2D1A7759AE98F4130B75D0 &nbsp;&nbsp;xp.7z</li>
+</ul>
+<hr>
+<h4>說明</h4>
+<p>下載連結請查閱「虛擬機映像檔下載.html」文件，此處僅提供最新驗證碼供比對。<br />
+<p class="foot-v">本文件版本：2024-1127</p><!-- 24H2 LTSC  -->
+</body>
+</html>
